@@ -1,0 +1,253 @@
+/* Common */
+:root {
+  --primary-color:rgb(238, 77, 45);
+  --white-color:#fff;
+  --black-color:#000;
+  --text-color:#ccc;
+  --header-height:120px;
+  --nav1-top-height:35px;
+  --nav2-bottom-height: calc(var(--header-height) - var(--nav1-top-height));
+}
+
+*{
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+    
+}
+html{
+  box-sizing: border-box;
+  line-height: 1.6;
+  font-size: 62.5%;
+  letter-spacing: -1px;
+  font-family: "Roboto Mono", monospace;
+}
+/* Grid--library */
+.grid{
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.grid-full-width{
+  width: 100%;
+}
+.g-row{
+  display: flex;
+  flex-wrap: wrap;
+}
+/*  */
+
+.l-bold{
+  font-weight: 900 !important;
+}
+.m-bold{
+  font-weight: 400 !important;
+}
+/* disable */
+.btn-disable:hover{
+  cursor: text !important;
+  opacity: 1 !important;
+}
+/* Modal library*/
+.modal{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  animation: GrowthwithOpacity linear 0.2s;
+}
+.modal__content{
+  --growth-from:0.7;
+  --growth-to:1;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  overflow: hidden;
+  animation: GrowthwithScale linear 0.1s;
+}
+.btn.btn-txt-white{
+  color: var(--white-color);
+}
+.btn.btn-txt-black{
+  color: var(--black-color);
+}
+.btn{
+  display: block;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  border-radius: 2px;
+  padding: 10px 48px;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.btn.btn-primary{
+  background-color: var(--primary-color);
+}
+/* Pagination */
+.pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.pagination-item--active .pagination-item__link{
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+.pagination-item--active .pagination-item__link:hover{
+  filter: brightness(105%);
+}
+.pagination-item__link{
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #939393;
+  padding: 4px 16px;
+  
+  margin: 0px 10px;
+  border-radius: 2px;
+}
+/*  */
+.w-140{
+  width: 140px;
+}
+.w-240{
+  width: 204px;
+}
+.auth-form{
+  padding: 0 32px;
+  width: 500px;
+}
+.auth-form__header{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+  padding-top: 20px;
+  
+}
+.auth-form__header h3{
+  font-size: 3rem;
+}
+
+.auth-form__header button{
+  cursor: pointer;
+ font-size: 1.8rem;
+ border: none;
+ background-color: var(--white-color);
+ color: var(--primary-color);
+}
+.auth-form__form__group .form__group-input{
+  width: 100%;
+  padding: 10px;
+  font-size: 1.3rem;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+.auth-form__policy-text{
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+
+.auth-form__policy-text-link{
+  text-decoration: none;
+  color: var(--primary-color);
+}
+.auth-form__btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+.auth-form__btn-back{
+  margin-right: 10px;
+}
+.auth-form__btn-back:hover{
+  background-color: rgb(237 236 236);;
+}
+.auth-form__footer{
+  overflow: hidden;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 32px;
+  background-color: antiquewhite;
+}
+.footer-social__fb i {
+  color: var(--white-color);
+  font-size: 2rem;
+}
+.footer-social__sms i {
+  color: var(--white-color);
+  font-size: 2rem;
+}
+.footer-social__gg i {
+  color: var(--black-color);
+  font-size: 2rem;
+}
+.footer-social__fb {
+  background-color: #243965;
+}
+.footer-social__gg{
+  background-color: #ffffff;
+}
+.footer-social__sms{
+  background-color: #0f830a;
+}
+.footer-social__sms,
+.footer-social__fb,
+.footer-social__gg{
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 6px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 3px;
+}
+.social-txt-sms,
+.social-txt-gg,
+.social-txt-fb{
+  text-decoration: none;
+
+}
+.social-txt-sms,
+.social-txt-fb{
+  color: var(--white-color);
+}
+.social-txt-gg{
+  color: rgb(170, 168, 168);
+}
+
+.auth-form__policy{
+ display: flex;
+ justify-content: flex-end;
+ margin-top: 5px;
+}
+
+.auth-form__policy__forgot a{
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 1.3rem;
+}
+
+.auth-form__policy__help a{
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.3rem;
+}
+.auth-form__policy__serapate{
+  border: 1px solid #ccc;
+  height: 20px;
+  margin: 0 10px;
+}
+
+
+
+

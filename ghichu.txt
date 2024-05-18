@@ -1,0 +1,1 @@
+1. Khi thằng li(cha) đã hover và thằng con cũng hover thì sẽ không ăn ? ('Chưa có câu trả lời')
